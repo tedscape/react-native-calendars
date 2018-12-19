@@ -22,6 +22,8 @@ class CalendarListItem extends Component {
 
   render() {
     const row = this.props.item;
+    console.log('row -> listItem -> ', row.getTime); // eslint-disable-line
+    console.log(row); // eslint-disable-line
     if (row.getTime) {
       return (
         <Calendar
@@ -30,7 +32,8 @@ class CalendarListItem extends Component {
           current={row}
           hideArrows={this.props.hideArrows}
           hideExtraDays={this.props.hideExtraDays}
-          disableMonthChange
+          disableMonthChange={this.props.disableMonthChange}
+          onMonthChange={this.props.onMonthChange}
           markedDates={this.props.markedDates}
           markingType={this.props.markingType}
           hideDayNames={this.props.hideDayNames}
