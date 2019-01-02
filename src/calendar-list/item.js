@@ -22,8 +22,7 @@ class CalendarListItem extends Component {
 
   render() {
     const row = this.props.item;
-    console.log('row -> listItem -> ', row.getTime); // eslint-disable-line
-    console.log(row); // eslint-disable-line
+
     if (row.getTime) {
       return (
         <Calendar
